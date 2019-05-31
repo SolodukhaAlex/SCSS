@@ -1,0 +1,150 @@
+@media (max-width: 1000px) {
+  header {
+    justify-content: center;
+  }
+  .main-icons {
+    display: none;
+  }
+  header nav {
+    margin-left: 0;
+  }
+  header nav ul li a {
+    padding: 5px 20px;
+  }
+  .main-info h1 {
+    font-size: 70px;
+  }
+  .menu-center .menu-items:last-child {
+    margin-top: auto;
+  }
+  .menu {
+    height: auto;
+  }
+  .review .rev {
+    padding: 0px 10px 0;
+    font-size: 19px;
+  }
+  .review h2 {
+    margin-top: 65px;
+  }
+  .call-back form {
+    justify-content: center;
+  }
+  .test {
+    width: 51%;
+  }
+  .center-call {
+    height: auto;
+  }
+  .call-back {
+    height: auto;
+  }
+  .call-back:after {
+    content: " ";
+    display: block;
+    height: 20px;
+  }
+  footer{
+    height: auto;
+  }
+  footer .footer-blocks{
+    justify-content: center;
+  }
+  .block{
+    width: 320px;
+  }
+}
+@media (max-width: 630px) {
+  header ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 300px;
+  }
+  header ul li {
+    width: 50%;
+  }
+  .main-icons {
+    display: block;
+  }
+  .main-info h1 {
+    font-size: 40px;
+  }
+  header nav ul li:hover::before {
+    height: 0;
+  }
+  .fone-right-food {
+    height: 870px;
+  }
+  .right-food {
+    margin: 0;
+    justify-content: center;
+  }
+  .right-food .item-food {
+    width: 320px;
+  }
+  .right-food .item-food:last-child {
+    width: 295px;
+  }
+  .right-food .item-food .plate {
+    height: 290px;
+  }
+  .ingridient .ingridient-txt {
+    margin: 0 auto;
+  }
+  .ingridient-txt p {
+    padding: 0 10px;
+  }
+  .review {
+    width: 85%;
+    height: auto;
+  }
+  .review p span {
+    padding-bottom: 20px;
+  }
+  .call-back form {
+    margin: 0 auto;
+    display: block;
+    width: 200px;
+  }
+  .call-photos{
+    display: none;
+  }
+  .center-call .call-form{
+    width: 95%;
+  }
+  .block{
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-info h1 {
+    margin-top: 70px;
+  }
+  .ingridient .ingridient-txt {
+    height: auto;
+  }
+  .header-button .black-btn,
+  .header-button .white-btn {
+    margin-right: 0;
+  }
+  .name-menu span {
+    font-size: 17px;
+  }
+  .review {
+    width: 90%;
+    height: auto;
+  }
+  .review h2 {
+    margin-top: 30px;
+  }
+  .review .rev {
+    padding: 0;
+    font-size: 16px;
+    line-height: 30px;
+  }
+  .block{
+    height: auto;
+  }
+}

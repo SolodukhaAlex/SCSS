@@ -1,0 +1,402 @@
+@font-face {
+  font-family: "Myriad Pro Regular";
+  src: url("../Fonts/MyriadPro-Regular.eot");
+  src: url("../Fonts/MyriadPro-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../Fonts/MyriadPro-Regular.woff") format("woff"),
+    url("../Fonts/MyriadPro-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+$gold: #cc9900;
+$text-color: #5d5d5d;
+* {
+  box-sizing: border-box;
+}
+//что не работал transition при запуске страницы
+@mixin flex($jc) {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: $jc;
+}
+%center-block {
+  margin: 0 auto;
+  max-width: 1210px;
+}
+%h-yellow {
+  font-family: "Yeseva One", cursive;
+  color: $gold;
+  font-size: 36px;
+  text-align: center;
+  @media (max-width: 480px) {
+    font-size: 26px;
+  }
+}
+.main-info {
+  background: url("../Images/header.jpg") center top no-repeat;
+  background-attachment: local;
+  background-size: cover;
+  height: 750px;
+}
+header {
+  @extend %center-block;
+  @include flex(space-between);
+  nav {
+    margin-left: auto;
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+      li {
+        position: relative;
+        display: inline-block;
+        &::before {
+          content: "";
+          width: 100%;
+          height: 0;
+          display: block;
+          background: #c8c5bd;
+          top: -16px;
+          position: absolute;
+          transition: 0.4s;
+        }
+        &:hover::before {
+          height: 4px;
+        }
+        a {
+          text-decoration: none;
+          color: #fff;
+          font-family: "Gentium Book Basic", serif;
+          font-weight: 700;
+          text-transform: capitalize;
+          padding: 23px 30px;
+          display: block;
+        }
+      }
+    }
+  }
+}
+header .main-icons {
+  a {
+    color: #dab33e;
+  }
+  a:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+.main-info h1 {
+  text-align: center;
+  font-family: "Yeseva One", cursive;
+  font-size: 90px;
+  color: #fff;
+  max-width: 980px;
+  padding: 0 10px;
+  margin: 0 auto;
+  margin-top: 150px;
+}
+.main-info .uzor {
+  margin: 20px auto 0 auto;
+  display: block;
+}
+.header-button {
+  @include flex(center);
+  .black-btn {
+    margin-top: 20px;
+    display: block;
+    width: 230px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    border: 1px solid #000;
+    text-decoration: none;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.6);
+    font-family: "Lato", sans-serif;
+    text-transform: uppercase;
+    margin-right: 20px;
+    &:hover {
+      transition: 0.7s;
+      background: rgba(0, 0, 0, 1);
+    }
+  }
+  .white-btn {
+    margin-top: 20px;
+    display: block;
+    width: 230px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    border: 1px solid #fff;
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+    font-family: "Lato", sans-serif;
+    text-transform: uppercase;
+    margin-right: 20px;
+    &:hover {
+      transition: 0.7s;
+      background: rgba(255, 255, 255, 1);
+      color: #000;
+    }
+  }
+}
+.fone-right-food {
+  height: 710px;
+  background: url("../Images/bg-food.jpg") center center no-repeat local/cover;
+  span {
+    visibility: hidden;
+  }
+}
+.right-food {
+  @include flex(space-between);
+  max-width: 1050px;
+  margin: 80px auto 0;
+  .item-food {
+    width: 49%;
+    text-align: center;
+    .plate {
+      width: 100%;
+    }
+    h2 {
+      @extend %h-yellow;
+    }
+    p {
+      font-family: "Lato", sans-serif;
+      color: $text-color;
+      padding: 0 5px;
+    }
+  }
+}
+.ingridient {
+  height: 750px;
+  background: url("../Images/ingred.jpg") center center no-repeat local/cover;
+  &-item {
+    @extend %center-block;
+    @include flex(end);
+    height: 100%;
+  }
+  &-txt {
+    @include flex(center);
+    width: 570px;
+    height: 450px;
+    background: rgba(0, 0, 0, 0.4);
+    margin: 0 10px 0 auto;
+    h2 {
+      @extend %h-yellow;
+      color: #fff;
+      margin: 0 15px;
+    }
+    p {
+      padding: 0 80px;
+      text-align: center;
+      color: #fff;
+    }
+    img {
+      margin-top: 10px;
+    }
+  }
+}
+.ingridient-img {
+  @include flex(center);
+}
+.menu {
+  height: 890px;
+  background: url("../Images/bg-menu.jpg") center center no-repeat local/cover;
+  &-center {
+    @extend %center-block;
+    @include flex(space-around);
+    align-items: flex-start;
+  }
+}
+.menu-items {
+  text-align: center;
+  width: 492px;
+  padding: 0 10px;
+  h2 {
+    @extend %h-yellow;
+  }
+}
+
+.name-and-description {
+  margin: 30px 0;
+}
+.name-menu {
+  @include flex(space-between);
+  border-bottom: 1px solid $gold;
+  padding-bottom: 10px;
+  span {
+    font-family: "Yeseva One", cursive;
+    font-size: 21px;
+    color: $gold;
+  }
+}
+.description {
+  margin-top: 10px;
+  font-family: "Lato", sans-serif;
+  color: $text-color;
+  text-align: left;
+}
+.menu-center .menu-items:last-child {
+  margin-top: -93px;
+}
+.reviews {
+  height: 760px;
+  @include flex(center);
+  text-align: center;
+  background: url("../Images/reviews.jpg") center top local/cover;
+}
+.review {
+  width: 60%;
+  height: 560px;
+  background: url("../Images/rew-square.png") center center local/cover;
+  color: #fff;
+  h2 {
+    @extend %h-yellow;
+    color: #fff;
+    margin-top: 85px;
+  }
+  .rev {
+    padding: 0px 70px 0;
+    font-family: "Gentium Book Basic", serif;
+    font-weight: 700;
+    font-size: 2vw;
+    color: #dde0df;
+    line-height: 45px;
+  }
+  p span {
+    font-family: "Lato", sans-serif;
+    font-size: 18px;
+  }
+}
+.call-back {
+  height: 710px;
+  background: url("../Images/bg-food.jpg") center center no-repeat local/cover;
+}
+.center-call {
+  height: 710px;
+  @include flex(space-around);
+  @extend %center-block;
+  .call-photos,
+  .call-form {
+    width: 45%;
+  }
+}
+.call-photos {
+  @include flex(space-around);
+  .call-photo1 {
+    width: 45%;
+    height: 500px;
+    background: url("../Images/reserv1.jpg") center center no-repeat local/cover;
+  }
+  .call-photo2 {
+    width: 45%;
+    height: 500px;
+    background: url("../Images/reserv2.jpg") center center no-repeat local/cover;
+  }
+}
+.call-form {
+  text-align: center;
+  h2 {
+    @extend %h-yellow;
+  }
+  p {
+    font-family: "Lato", sans-serif;
+    color: $text-color;
+    line-height: 23px;
+  }
+}
+.call-back form {
+  @include flex(space-between);
+  text-align: left;
+  label {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    color: $gold;
+    font-size: 14px;
+    display: inline-block;
+    margin: 10px 0;
+  }
+  input[type="date"]::-webkit-clear-button {
+    display: none;
+  }
+  /* Removes the spin button */
+  input[type="date"]::-webkit-inner-spin-button {
+    display: none;
+  }
+  /* Always display the drop down caret */
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    color: #2c3e50;
+  }
+  /* A few custom styles for date inputs */
+  input[type="date"] {
+    appearance: none;
+    -webkit-appearance: none;
+    color: $text-color;
+    font-family: "Open Sans";
+    font-weight: 400i;
+    font-size: 13px;
+    display: inline-block !important;
+    visibility: visible !important;
+  }
+  select {
+    color: $text-color;
+    font-family: "Open Sans";
+    font-weight: 400i;
+    font-size: 13px;
+  }
+  input,
+  select {
+    width: 200px;
+    height: 40px;
+  }
+  input:focus,
+  select:focus {
+    outline: 1px solid $gold;
+  }
+  input {
+    padding: 10px 0 10px 10px;
+  }
+  ::-webkit-input-placeholder {
+    color: $text-color;
+    font-family: "Open Sans";
+    font-weight: 400i;
+    font-size: 13px;
+  }
+}
+footer {
+  color: #fff;
+  height: 320px;
+  background: #191919;
+  .footer-blocks {
+    height: auto;
+    @include flex(space-between);
+    @extend %center-block;
+  }
+}
+.block {
+  text-align: center;
+  height: 230px;
+  margin-top: 60px;
+  width: 320px;
+}
+.block h2 {
+  text-transform: capitalize;
+}
+.block p {
+  font-family: "Open Sans", sans-serif;
+  line-height: 23px;
+}
+.block p span {
+  font-weight: 700;
+}
+.footer-soc a {
+  text-decoration: none;
+  color: #fff;
+}
+.footer-soc a:not(:last-child) {
+  margin-right: 10px;
+}
+// font-family: 'Yeseva One', cursive;
+// font-family: 'Gentium Book Basic', serif;
+// font-family: 'Lato', sans-serif;
+// font-family: 'Open Sans', sans-serif;
+// font-family: 'Myriad Pro Regular;

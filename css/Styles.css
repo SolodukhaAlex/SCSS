@@ -1,0 +1,578 @@
+@font-face {
+  font-family: "Myriad Pro Regular";
+  src: url("../Fonts/MyriadPro-Regular.eot");
+  src: url("../Fonts/MyriadPro-Regular.eot?#iefix") format("embedded-opentype"), url("../Fonts/MyriadPro-Regular.woff") format("woff"), url("../Fonts/MyriadPro-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header, .ingridient-item, .menu-center, .center-call, footer .footer-blocks {
+  margin: 0 auto;
+  max-width: 1210px;
+}
+
+.right-food .item-food h2, .ingridient-txt h2, .menu-items h2, .review h2, .call-form h2 {
+  font-family: "Yeseva One", cursive;
+  color: #cc9900;
+  font-size: 36px;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .right-food .item-food h2, .ingridient-txt h2, .menu-items h2, .review h2, .call-form h2 {
+    font-size: 26px;
+  }
+}
+
+.main-info {
+  background: url("../Images/header.jpg") center top no-repeat;
+  background-attachment: local;
+  background-size: cover;
+  height: 750px;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header nav {
+  margin-left: auto;
+}
+
+header nav ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+header nav ul li {
+  position: relative;
+  display: inline-block;
+}
+
+header nav ul li::before {
+  content: "";
+  width: 100%;
+  height: 0;
+  display: block;
+  background: #c8c5bd;
+  top: -16px;
+  position: absolute;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+header nav ul li:hover::before {
+  height: 4px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Gentium Book Basic", serif;
+  font-weight: 700;
+  text-transform: capitalize;
+  padding: 23px 30px;
+  display: block;
+}
+
+header .main-icons a {
+  color: #dab33e;
+}
+
+header .main-icons a:not(:last-child) {
+  margin-right: 20px;
+}
+
+.main-info h1 {
+  text-align: center;
+  font-family: "Yeseva One", cursive;
+  font-size: 90px;
+  color: #fff;
+  max-width: 980px;
+  padding: 0 10px;
+  margin: 0 auto;
+  margin-top: 150px;
+}
+
+.main-info .uzor {
+  margin: 20px auto 0 auto;
+  display: block;
+}
+
+.header-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header-button .black-btn {
+  margin-top: 20px;
+  display: block;
+  width: 230px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  border: 1px solid #000;
+  text-decoration: none;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.6);
+  font-family: "Lato", sans-serif;
+  text-transform: uppercase;
+  margin-right: 20px;
+}
+
+.header-button .black-btn:hover {
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  background: black;
+}
+
+.header-button .white-btn {
+  margin-top: 20px;
+  display: block;
+  width: 230px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  border: 1px solid #fff;
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+  font-family: "Lato", sans-serif;
+  text-transform: uppercase;
+  margin-right: 20px;
+}
+
+.header-button .white-btn:hover {
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  background: white;
+  color: #000;
+}
+
+.fone-right-food {
+  height: 710px;
+  background: url("../Images/bg-food.jpg") center center no-repeat local/cover;
+}
+
+.fone-right-food span {
+  visibility: hidden;
+}
+
+.right-food {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 1050px;
+  margin: 80px auto 0;
+}
+
+.right-food .item-food {
+  width: 49%;
+  text-align: center;
+}
+
+.right-food .item-food .plate {
+  width: 100%;
+}
+
+.right-food .item-food p {
+  font-family: "Lato", sans-serif;
+  color: #5d5d5d;
+  padding: 0 5px;
+}
+
+.ingridient {
+  height: 750px;
+  background: url("../Images/ingred.jpg") center center no-repeat local/cover;
+}
+
+.ingridient-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  height: 100%;
+}
+
+.ingridient-txt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 570px;
+  height: 450px;
+  background: rgba(0, 0, 0, 0.4);
+  margin: 0 10px 0 auto;
+}
+
+.ingridient-txt h2 {
+  color: #fff;
+  margin: 0 15px;
+}
+
+.ingridient-txt p {
+  padding: 0 80px;
+  text-align: center;
+  color: #fff;
+}
+
+.ingridient-txt img {
+  margin-top: 10px;
+}
+
+.ingridient-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.menu {
+  height: 890px;
+  background: url("../Images/bg-menu.jpg") center center no-repeat local/cover;
+}
+
+.menu-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.menu-items {
+  text-align: center;
+  width: 492px;
+  padding: 0 10px;
+}
+
+.name-and-description {
+  margin: 30px 0;
+}
+
+.name-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #cc9900;
+  padding-bottom: 10px;
+}
+
+.name-menu span {
+  font-family: "Yeseva One", cursive;
+  font-size: 21px;
+  color: #cc9900;
+}
+
+.description {
+  margin-top: 10px;
+  font-family: "Lato", sans-serif;
+  color: #5d5d5d;
+  text-align: left;
+}
+
+.menu-center .menu-items:last-child {
+  margin-top: -93px;
+}
+
+.reviews {
+  height: 760px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  background: url("../Images/reviews.jpg") center top local/cover;
+}
+
+.review {
+  width: 60%;
+  height: 560px;
+  background: url("../Images/rew-square.png") center center local/cover;
+  color: #fff;
+}
+
+.review h2 {
+  color: #fff;
+  margin-top: 85px;
+}
+
+.review .rev {
+  padding: 0px 70px 0;
+  font-family: "Gentium Book Basic", serif;
+  font-weight: 700;
+  font-size: 2vw;
+  color: #dde0df;
+  line-height: 45px;
+}
+
+.review p span {
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+}
+
+.call-back {
+  height: 710px;
+  background: url("../Images/bg-food.jpg") center center no-repeat local/cover;
+}
+
+.center-call {
+  height: 710px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.center-call .call-photos,
+.center-call .call-form {
+  width: 45%;
+}
+
+.call-photos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.call-photos .call-photo1 {
+  width: 45%;
+  height: 500px;
+  background: url("../Images/reserv1.jpg") center center no-repeat local/cover;
+}
+
+.call-photos .call-photo2 {
+  width: 45%;
+  height: 500px;
+  background: url("../Images/reserv2.jpg") center center no-repeat local/cover;
+}
+
+.call-form {
+  text-align: center;
+}
+
+.call-form p {
+  font-family: "Lato", sans-serif;
+  color: #5d5d5d;
+  line-height: 23px;
+}
+
+.call-back form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: left;
+  /* Removes the spin button */
+  /* Always display the drop down caret */
+  /* A few custom styles for date inputs */
+}
+
+.call-back form label {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  color: #cc9900;
+  font-size: 14px;
+  display: inline-block;
+  margin: 10px 0;
+}
+
+.call-back form input[type="date"]::-webkit-clear-button {
+  display: none;
+}
+
+.call-back form input[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+
+.call-back form input[type="date"]::-webkit-calendar-picker-indicator {
+  color: #2c3e50;
+}
+
+.call-back form input[type="date"] {
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  color: #5d5d5d;
+  font-family: "Open Sans";
+  font-weight: 400i;
+  font-size: 13px;
+  display: inline-block !important;
+  visibility: visible !important;
+}
+
+.call-back form select {
+  color: #5d5d5d;
+  font-family: "Open Sans";
+  font-weight: 400i;
+  font-size: 13px;
+}
+
+.call-back form input,
+.call-back form select {
+  width: 200px;
+  height: 40px;
+}
+
+.call-back form input:focus,
+.call-back form select:focus {
+  outline: 1px solid #cc9900;
+}
+
+.call-back form input {
+  padding: 10px 0 10px 10px;
+}
+
+.call-back form ::-webkit-input-placeholder {
+  color: #5d5d5d;
+  font-family: "Open Sans";
+  font-weight: 400i;
+  font-size: 13px;
+}
+
+footer {
+  color: #fff;
+  height: 320px;
+  background: #191919;
+}
+
+footer .footer-blocks {
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.block {
+  text-align: center;
+  height: 230px;
+  margin-top: 60px;
+  width: 320px;
+}
+
+.block h2 {
+  text-transform: capitalize;
+}
+
+.block p {
+  font-family: "Open Sans", sans-serif;
+  line-height: 23px;
+}
+
+.block p span {
+  font-weight: 700;
+}
+
+.footer-soc a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer-soc a:not(:last-child) {
+  margin-right: 10px;
+}
+/*# sourceMappingURL=Styles.css.map */
